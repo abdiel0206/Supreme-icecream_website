@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: palevioletred;
+}
+/* Navigation bar*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%;
+    background: #8f005f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+}
+
+.logo2 {
+    width: 70px;
+    height: 70px;
+}
+
+.navbar {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    font-size: 1.125rem; /* 18px */
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #ff00aa;
+}
+
+#menu-icon {
+    font-size: 30px;
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block; 
+    }
+
+    .navbar {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #8f005f;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+        font-size: 1rem; /* smaller font size for smaller screens */
+    }
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto; /* Preserve aspect ratio */
+    display: block;
+}
+
+.text-overlay {
+    font-family: 'lobster';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: rgb(255, 14, 235);
+    padding: 20px 40px;
+    font-size: 3.5rem; /* 70px */
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.main {
+    background-color: palevioletred;
+    display: grid;
+    place-items: center;
+    height: 120px;
+}
+
+button {
+    font-family: 'lobster';
+    position: relative;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background-color: #8f005f;
+    width: 280px;
+    height: 50px;
+    color: white;
+    overflow: hidden;
+    font-size: 1.375rem; /* 22px */
+    font-weight: bold;
+}
+
+span {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+}
+
+.text1:hover {
+    color: rgb(255, 14, 235);
+}
+
+.intro {
+    background: pink;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flavour {
+    height: 250px;
+    width: 350px;
+    margin: 20px 0;
+}
+
+.offers {
+    font-family: 'poppins';
+    color: rgb(255, 14, 235);
+    font-size: 2.5rem; /* 50px */
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #2d3436;
+    color: #fff;
+    padding: 80px 0;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-left: 90px;
+}
+
+.footer-content h3 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+    transition: color 0.3s;
+    font-size: 1.5rem;
+}
+
+.social-links a:hover {
+    color: #8f005f;
+}
+
+/* Mobile Adjustments for smaller screens (Below 480px) */
+@media (max-width: 480px) {
+    .text-overlay {
+        font-size: 2.5rem; /* 40px */
+        padding: 15px 25px;
+    }
+
+    .main button {
+        width: 200px;
+        height: 45px;
+        font-size: 1.125rem; /* 18px */
+    }
+
+    .intro .flavour {
+        width: 300px;
+        height: 200px;
+    }
+
+    .offers {
+        font-size: 2rem; /* 32px */
+    }
+
+    .footer p {
+        font-size: 1rem; /* 16px */
+    }
+
+    .social-icons a {
+        font-size: 1.5rem; /* 24px */
+    }
+}
+
